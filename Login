@@ -1,0 +1,26 @@
+
+def login_system():
+    # 미리 설정된 4자리 숫자 (비밀번호)
+    correct_pin = "1234"
+
+    print("중고거래 프로그램에 오신 것을 환영합니다!")
+
+    while True:
+        # 사용자 입력
+        user_input = input("4자리 숫자를 입력하세요: ")
+
+        # 입력 검증
+        if len(user_input) != 4 or not user_input.isdigit():
+            print("잘못된 입력입니다. 4자리 숫자를 입력하세요.")
+            continue
+
+        # 비밀번호 확인
+        if user_input == correct_pin:
+            print("로그인 성공! 환영합니다!")
+            break
+        else:
+            print("로그인 실패. 다시 시도하세요.")
+
+# 프로그램 실행
+if __name__ == "__main__":
+    login_system()
